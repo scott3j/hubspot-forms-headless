@@ -1,14 +1,15 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
-  "globalEnv": [
-    "NEXT_PUBLIC_*",
-    "HUBSPOT_*"
-  ],
   "tasks": {
     "build": {
       "dependsOn": [
         "^build"
+      ],
+      "env": [
+        "HUBSPOT_ACCESS_TOKEN",
+        "HUBSPOT_FORM_ID",
+        "HUBSPOT_PORTAL_ID"
       ],
       "inputs": [
         "$TURBO_DEFAULT$",
